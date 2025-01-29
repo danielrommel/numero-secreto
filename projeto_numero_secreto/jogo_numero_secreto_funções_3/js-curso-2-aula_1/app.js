@@ -5,7 +5,7 @@ let numeroEscolhido;
 let tentativa;
 
 listaDeNumerosSorteados = [];
-numeroLimite = 10;
+numeroLimite = 100;
 
 let campo;
 let numeroSecreto;

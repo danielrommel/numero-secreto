@@ -1,0 +1,18 @@
+1 - Primeiramente instalamos o repositorio(remoto) no github;
+2 - Instalamos o git na maquina local(repositorio local);
+3 - Realizar comandos no terminanl para fazer a comunicação entre o git e o github, inserindo os arquivos armazenados localmente pelo git no github remoto;
+3.1 - Com o IDE VSCode aberto e na pasta principal do projeto, abra o terminal e execute o comando (git init) ele irá colocar essa pasta como repositorio local;
+3.2 - Execute o comando (git add .) ou (git add arquivoDesejado)"git add => adiciona os arquivos do seu repositorio preparado para commmitar". O (.) serve para adicionar, todos os arquivos de uma vez. O (arquivoDesejado) será adicionado de um por um;
+3.3 - Execute o comando (git commit -m "descrição do commit"). Esse comando vai registrar os arquivos no repositorio local;
+3.4 - git branch -M main;
+3.5 - git remote add origin git@github.com:danielrommel/numero-secreto.git;
+3.6 - git push -u origin main "caso retorne erro de autenticação passe para o proximo passo e depois tente de novo esse mesmo passo, eles estara de volta la na frente";
+4 - Gerar chave ssh no computador local que deseja conectar ao github;
+4.1 Verifique se a chave já existe, se existir copie a chave aleatoria do arquivo e cole no SSH do github no passo 5.
+4.2 Se não existir crie uma ssh com esse comando (ssh-keygen -t ed25519 -C "seuemail@emaildogit").
+4.3 Escolha a pasta que deseja deixar a chave, se confirmar sem preencher nada, o arquivo ficara salvo na pasta padrao "caminhoDoDiscoLocal > usuario > ssh". Depois vai solicitar uma senha, de preferencia não deixe senha pois a chave criada e vinculada ao github já irá manter a segurança. Para não deixar senha é so confirmar duas vezes;
+4.4 Para copiar o arquivo criado vai precisar abrir ele com o bloco de notas para poder copiar
+5 - Copie a chave gerada e cole no ssh do github como feito no proximo passo;
+5.1 No github va em (Settings) > (SSH and GPG keys) > preencher titulo, authentication key e na ultima opção cole a chave e confirme;
+6 - Tente novamente o passo 3.6;
+7 - Veja se está tudo ok.
